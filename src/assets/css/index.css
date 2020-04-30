@@ -1,0 +1,50 @@
+@import "../fonts/iconfont.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #e1e301;
+}
+
+#app {
+    background-color: #000;
+}
+
+/* 进入过渡的开始状态 */
+.v-enter {
+    transform: translateX(100%); /*开始前，元素在屏幕右边100%区域（元素的宽度大小）*/
+}
+
+/* 进入过渡生效时的状态 */
+.v-enter-active {
+    transform: translateX(100%); /*开始时，元素在屏幕右边100%区域（元素的宽度大小）*/
+    transition: 1s; /*设置过渡时间*/
+}
+
+/* 进入过渡的结束状态 */
+.v-enter-to {
+    transform: translateX(0); /*结束后元素回到屏幕左边*/
+}
+
+
+/* 离开过渡的开始状态 */
+.v-leave {
+    transform: translateX(0); /*离开前，元素在屏幕左边*/
+}
+
+/* 离开过渡生效时的状态 */
+.v-leave-active {
+    transform: translateX(0); /*离开时，元素在屏幕左边*/
+    transition: 1s; /*设置过渡时间*/
+}
+
+/* 离开过渡的结束状态 */
+.v-leave-to {
+    transform: translateX(100%); /*离开后，元素在屏幕左边-100%区域（元素的宽度大小）*/
+}
